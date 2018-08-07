@@ -8,8 +8,9 @@
 #replace open with xdg-open if using with linux
 
 ############### USAGE ###########################
-
-# bit pr url, target_branch, source, branch
+#
+# cd to git dir
+# bit pr [targetusername] [targetbranch]
 # branch is option in case you want to create a pr with current active branch
 
 
