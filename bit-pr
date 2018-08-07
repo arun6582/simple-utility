@@ -1,0 +1,31 @@
+
+#!/bin/bash
+
+#this is not complete
+############### LITTLE CONTEXT ##################
+#its irritating and slow to create a pull request through UI
+#works with os x just place it inside ~/bin/
+#replace open with xdg-open if using with linux
+
+############### USAGE ###########################
+
+# bit pr url, target_branch, source, branch
+# branch is option in case you want to create a pr with current active branch
+
+
+if [ -z "$3" ]
+then 
+    branch=`git rev-parse --abbrev-ref HEAD`
+else
+    branch=$5
+fi
+
+if [ -z "$branch" ]
+then 
+    echo "ain't gonna work without branch"
+    exit
+fi
+
+#https://bitbucket.org/arun6582/contify-sourcebot/pull-requests/new?source=iter-1&t=1
+url="https://bitbucket.org/$1/$2"
+open "$url/pull-requests/new?source=$branch?t=1"

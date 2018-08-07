@@ -1,0 +1,29 @@
+#!/bin/bash
+
+############### LITTLE CONTEXT ##################
+#its irritating and slow to create a pull request through UI
+#works with os x just place it inside ~/bin/
+#replace open with xdg-open if using with linux
+
+############### USAGE ###########################
+
+# git pr url, target_branch, source, branch
+# branch is option in case you want to create a pr with current active branch
+
+
+if [ -z "$5" ]
+then 
+    branch=`git rev-parse --abbrev-ref HEAD`
+else
+    branch=$5
+fi
+
+if [ -z "$branch" ]
+then 
+    echo "ain't gonna work without branch"
+    exit
+fi
+
+url="https://github.com/$1/$2"
+
+open "$url/compare/$3...$4:$branch"
