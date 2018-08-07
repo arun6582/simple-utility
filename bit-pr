@@ -8,7 +8,7 @@
 #replace open with xdg-open if using with linux
 
 ############### USAGE ###########################
-#
+# isn't tested on forks
 # cd to git dir
 # bit pr [targetusername] [targetbranch]
 # branch is option in case you want to create a pr with current active branch
