@@ -1,0 +1,29 @@
+#!/bin/bash
+
+############### LITTLE CONTEXT ##################
+#its irritating and slow to create a pull request through UI
+#works with os x just place it inside ~/bin/
+#replace open with xdg-open if using with linux
+
+############### USAGE ###########################
+
+# git prcommitdiff user, repo, previous commit, next commit
+# commit is optional in case you want to create a pr with current active branch
+
+
+if [ -z "$4" ]
+then 
+    next=`git log -n 1 --pretty=format:"%h"`
+else
+    next=$4
+fi
+
+if [ -z "$next" ]
+then 
+    echo "ain't gonna work without next commit"
+    exit
+fi
+
+url="https://github.com/$1/$2"
+
+open "$url/compare/$3..$next"
