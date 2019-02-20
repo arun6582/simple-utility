@@ -9,8 +9,8 @@
 
 # git pr target_user target_repo target_branch source_user source_branch[optional]
 # git pr coverfox rblog pre-master arun6582 [yourbranch(option)]
-# yourbranch is option in case you want to create a pr with current active branch
-# its a no brainer but faster than ui in case u have these commands saved in bash history
+# yourbranch is optional in case you want to create a pr with current active branch
+# its a nobrainer and faster than ui in case u have these commands saved in bash history
 
 
 if [ -z "$5" ]
