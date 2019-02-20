@@ -3,14 +3,14 @@
 ############### LITTLE CONTEXT ##################
 # its irritating and slow to create a pull request through UI
 # works with macos x out of box just place it inside ~/bin/ and add ~/bin to your $PATH
-# replace open with xdg-open if using with linux
+# replace open with xdg-open if using on linux
 
 ############### USAGE ###########################
 
 # git pr target_user target_repo target_branch source_user source_branch[optional]
 # git pr coverfox rblog pre-master arun6582 [yourbranch(option)]
 # yourbranch is option in case you want to create a pr with current active branch
-# its a no brainer but faster than ui in case u can these commands saved in bash history
+# its a no brainer but faster than ui in case u have these commands saved in bash history
 
 
 if [ -z "$5" ]
